@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="160dp">
+
+
+    <View
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#919191"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp">
+
+    </View>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/DefaultImageID"
+            android:layout_width="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/default_image"
+            android:layout_height="60dp">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+
+    <TextView
+        android:id="@+id/SiginID"
+        android:layout_below="@id/DefaultImageID"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"
+        android:text="Not Login Account"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:text="sajibroy206@gmail.com"
+        android:textColor="@android:color/holo_red_light"
+        android:id="@+id/EmailAddressID"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/SiginID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+</RelativeLayout>

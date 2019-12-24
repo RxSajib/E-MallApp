@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".HomeFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/CatagoresTextID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Categories"
+                android:textColor="#686868"
+                android:textSize="22sp"></TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/CatagoryRecylearViewID"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_below="@id/CatagoresTextID"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+           <androidx.cardview.widget.CardView
+               android:layout_marginTop="10dp"
+               android:paddingLeft="5dp"
+               android:elevation="5dp"
+               android:paddingRight="5dp"
+               android:paddingBottom="5dp"
+               android:layout_below="@+id/CatagoryRecylearViewID"
+               android:layout_width="match_parent"
+               android:layout_height="180dp">
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+                   <androidx.viewpager.widget.ViewPager
+                       android:id="@+id/HomeViwePagerID"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent">
+
+
+
+                   </androidx.viewpager.widget.ViewPager>
+
+               </RelativeLayout>
+
+           </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

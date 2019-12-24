@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/appicon"
+        android:id="@+id/MyMall"
+        android:title="My Mall"></item>
+
+
+    <item
+        android:icon="@drawable/offericon"
+        android:id="@+id/MyOfferID"
+        android:title="My Offer"></item>
+
+
+    <item
+        android:id="@+id/MyRewardsID"
+        android:icon="@drawable/rewardsicon"
+        android:title="My Rewards"></item>
+    <item
+        android:icon="@drawable/carticonn"
+        android:id="@+id/MyCartID"
+        android:title="My Cart"></item>
+
+    <item
+        android:icon="@drawable/wishlisticon"
+        android:id="@+id/MyWishListID"
+        android:title="My WishList"></item>
+
+    <item
+        android:id="@+id/MyAccountID"
+        android:icon="@drawable/accounticon"
+        android:title="My Account"></item>
+ <item
+        android:id="@+id/LogoUtID"
+        android:icon="@drawable/logouticn"
+        android:title="LogOut"></item>
+
+</menu>
