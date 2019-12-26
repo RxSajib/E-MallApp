@@ -42,11 +42,7 @@ public class HomeActivity extends AppCompatActivity {
         navigationView.getMenu().getItem(0).setCheckable(true);
         navigationView.getMenu().getItem(0).setChecked(true);
 
-        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.M) {
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        } else {
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        }
+
 
         toolbar = findViewById(R.id.HomeToolbarID);
         setSupportActionBar(toolbar);
