@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,12 @@ public class HomeFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private CatagoryAdapter catagoryAdapter;
+
+    ////Catagory sliding banner
+    private ViewPager viewPager;
+    private SliderAdapter sliderAdapter;
+    private List<slider_model> slideriteamslist;
+    ////Catagory sliding banner
 
     public HomeFragment() {
         // Required empty public constructor
@@ -51,6 +58,21 @@ public class HomeFragment extends Fragment {
         catagoryAdapter  = new CatagoryAdapter(catagoryHolderList);
         recyclerView.setAdapter(catagoryAdapter);
         catagoryAdapter.notifyDataSetChanged();
+
+
+        /// catagory sliding banner
+        viewPager = view.findViewById(R.id.HomeViwePagerID);
+        slideriteamslist = new ArrayList<>();
+
+        slideriteamslist.add(new slider_model(R.drawable.offerone));
+        slideriteamslist.add(new slider_model(R.drawable.offertwo));
+        slideriteamslist.add(new slider_model(R.drawable.offerthree));
+        slideriteamslist.add(new slider_model(R.drawable.offerfour));
+
+        sliderAdapter = new SliderAdapter(slideriteamslist);
+
+        viewPager.setAdapter(sliderAdapter);
+        /// catagory sliding banner
 
         return view;
     }
