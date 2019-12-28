@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:elevation="2dp"
+    android:background="@drawable/gride_stoke"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/GrideImageID"
+            android:layout_width="75dp"
+            android:src="@drawable/glaxys10"
+            android:layout_centerHorizontal="true"
+            android:layout_height="75dp">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/GrideviewPhonenameID"
+            android:layout_below="@id/GrideImageID"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:text="Glaxy S10"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:id="@+id/GrideProcessorID"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/GrideviewPhonenameID"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:textColor="#FF5722"
+            android:text="SD 510"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:id="@+id/GridePhonePriceID"
+            android:layout_below="@id/GrideProcessorID"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:textSize="13dp"
+            android:text="BDT 1500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
