@@ -69,6 +69,43 @@
 
             </androidx.recyclerview.widget.RecyclerView>
 
+            <LinearLayout
+                android:id="@+id/HeadAdID"
+                android:layout_marginTop="3dp"
+                android:layout_below="@id/CatagoryRecylearViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    layout="@layout/strif_layout_ad"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/HeadDay"
+                android:layout_below="@id/HeadAdID"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    layout="@layout/sample_horizantal_layout"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@id/HeadDay"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    layout="@layout/gride_layout"/>
+
+            </LinearLayout>
+
+
+
         </RelativeLayout>
 
     </ScrollView>

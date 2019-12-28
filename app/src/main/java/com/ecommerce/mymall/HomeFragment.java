@@ -13,6 +13,10 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +41,26 @@ public class HomeFragment extends Fragment {
     private final long DElAY_TIME = 3000;
     private final long POST_TIME = 3000;
     ////Catagory sliding banner
+
+    ///stride_ad
+    private ImageView bannerad;
+    ///stride_ad
+
+    ////horizantal product
+    private TextView horizantal_productdeails;
+    private TextView horizantal_viewAll;
+    private RecyclerView horizantal_product;
+    private Horizantal_Adapter horizantal_adapter;
+    private List<Horizantal_Model> horizantal_modelList;
+    ///horizantal product
+
+    ///grideLayout
+    private TextView gridettitle;
+    private TextView grideshowall;
+    private GridView productlist;
+    private Gride_Adapter gride_adapter;
+    ///grideLayout
+
 
     public HomeFragment() {
         // Required empty public constructor
@@ -127,6 +151,43 @@ public class HomeFragment extends Fragment {
                 return true;
             }
         });
+
+        ///strideAD
+        bannerad = view.findViewById(R.id.StrifAdID);
+        ///strideAd
+
+
+        //// horizantal product
+
+        LinearLayoutManager horizantallayoutmanager = new LinearLayoutManager(getContext());
+        horizantallayoutmanager.setOrientation(RecyclerView.HORIZONTAL);
+
+        horizantal_productdeails = view.findViewById(R.id.HorzantalDealsTextID);
+        horizantal_viewAll = view.findViewById(R.id.HorizantalShowAllID);
+        horizantal_product = view.findViewById(R.id.HorixantalViewID);
+        horizantal_product.setHasFixedSize(true);
+
+        horizantal_product.setLayoutManager(horizantallayoutmanager);
+        horizantal_modelList = new ArrayList<>();
+        horizantal_modelList.add(new Horizantal_Model(R.drawable.glaxys10, "Redmi 5s", "SD 542", "price 17000/-"));
+        horizantal_modelList.add(new Horizantal_Model(R.drawable.reilmex, "Realme X", "SD 710", "price 22000/-"));
+        horizantal_modelList.add(new Horizantal_Model(R.drawable.samsung9s, "Samsung S9", "SD 800", "price 50000/-"));
+        horizantal_modelList.add(new Horizantal_Model(R.drawable.reailmecc, "Reailme C8", "SD 500", "price 13000/-"));
+        horizantal_modelList.add(new Horizantal_Model(R.drawable.motogp, "Moto Gp", "Adrino 530", "price 25000/-"));
+
+        horizantal_adapter = new Horizantal_Adapter(horizantal_modelList);
+        horizantal_product.setAdapter(horizantal_adapter);
+        horizantal_adapter.notifyDataSetChanged();
+
+        ///horizantal_product
+
+        ///gride_layout
+        gridettitle = view.findViewById(R.id.GrideProductTitileID);
+        grideshowall = view.findViewById(R.id.GrideViewAllID);
+        productlist = view.findViewById(R.id.ProductGrideViewID);
+        gride_adapter = new Gride_Adapter(horizantal_modelList);
+        productlist.setAdapter(gride_adapter);
+        ///gride_layout
 
         return view;
     }
