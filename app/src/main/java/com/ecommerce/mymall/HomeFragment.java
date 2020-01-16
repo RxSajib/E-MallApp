@@ -16,7 +16,14 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.ecommerce.mymall.Adapter.CatagoryAdapter;
+import com.ecommerce.mymall.Adapter.Gride_Adapter;
+import com.ecommerce.mymall.Adapter.Horizantal_Adapter;
+import com.ecommerce.mymall.Adapter.SliderAdapter;
+import com.ecommerce.mymall.ModalClass.CatagoryHolder;
+import com.ecommerce.mymall.ModalClass.Horizantal_Model;
+import com.ecommerce.mymall.ModalClass.slider_model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,6 +67,10 @@ public class HomeFragment extends Fragment {
     private GridView productlist;
     private Gride_Adapter gride_adapter;
     ///grideLayout
+
+    /// teast recylearview
+    private RecyclerView testview;
+    /// teast recylearview
 
 
     public HomeFragment() {
@@ -188,6 +199,16 @@ public class HomeFragment extends Fragment {
         gride_adapter = new Gride_Adapter(horizantal_modelList);
         productlist.setAdapter(gride_adapter);
         ///gride_layout
+
+
+        /// teast recylearview
+        testview = view.findViewById(R.id.TeastReylerviewID);
+        LinearLayoutManager teastlayoutmanager = new LinearLayoutManager(getContext());
+        teastlayoutmanager.setOrientation(RecyclerView.VERTICAL);
+        testview.setLayoutManager(teastlayoutmanager);
+        /// teast recylearview
+
+
 
         return view;
     }

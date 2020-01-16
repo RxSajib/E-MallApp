@@ -1,4 +1,4 @@
-package com.ecommerce.mymall;
+package com.ecommerce.mymall.ModalClass;
 
 public class slider_model {
 

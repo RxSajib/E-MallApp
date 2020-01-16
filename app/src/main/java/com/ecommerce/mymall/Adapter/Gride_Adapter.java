@@ -1,4 +1,4 @@
-package com.ecommerce.mymall;
+package com.ecommerce.mymall.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,6 +6,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.ecommerce.mymall.ModalClass.Horizantal_Model;
+import com.ecommerce.mymall.R;
 
 import java.util.ArrayList;
 import java.util.List;

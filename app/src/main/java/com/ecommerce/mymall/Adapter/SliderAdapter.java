@@ -1,6 +1,5 @@
-package com.ecommerce.mymall;
+package com.ecommerce.mymall.Adapter;
 
-import android.print.PageRange;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +7,9 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
+
+import com.ecommerce.mymall.R;
+import com.ecommerce.mymall.ModalClass.slider_model;
 
 import java.util.List;
 
